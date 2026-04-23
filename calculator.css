@@ -1,0 +1,97 @@
+ .calculator{
+    height: 460px;
+    width: 350px;
+    background-color: rgb(42, 39, 39);
+    border-radius: 15px;
+
+ }
+ body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+
+ 
+ #input{
+    height: 100px;
+    width: 350px;
+    border: none;
+    background-color: rgb(74, 254, 254);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+ }
+ .btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(181, 155, 205);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+     
+ }
+.btn:hover{
+    background-color: rgb(248, 146, 240);
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 10px;                              
+    padding: 15px;                       
+}
+#result{
+     height: 60px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(164, 84, 240);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+#result:hover{
+    background-color: moccasin;
+}
+#btn_clr{
+      height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(164, 84, 240);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+#btn_clr:hover{
+     background-color: moccasin;
+}
+.btn:active,
+#result:active,
+#btn_clr:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4) inset;
+}
+.result-animate {
+    animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
